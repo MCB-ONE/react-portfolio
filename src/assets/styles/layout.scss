@@ -1,0 +1,74 @@
+@import './colors.scss';
+
+/* Variables */
+$container-width-lg: 75%;
+$container-width-md: 86%;
+$container-width-sm: 90%;
+$transition: all 400ms ease;
+
+/* Layout */
+
+.container {
+	width: $container-width-lg;
+	margin: 0 auto;
+}
+
+section {
+	margin-top: 14rem;
+	.title{
+		margin-bottom: 4rem;
+		color: $primary;
+	}
+
+	.subtitle{
+		color: $light;
+	}
+}
+
+.button{
+	width: max-content;
+	display: inline-block;
+	color: $primary;
+	background-color: transparent;
+	padding: 0.75rem 1.2rem;
+	border-radius: 0.4rem;
+	cursor: pointer;
+	border: 1px solid $primary;
+	transition: $transition;
+	&--primary{
+		background-color: $primary;
+		color: $bg;
+	}
+	&:hover{
+		background-color: $white;
+		color: $bg;
+		border-color: transparent;
+	}
+}
+
+/* =========== Layout Media Queries =========== */
+
+@media screen and (max-width: 1024px) {
+	.container {
+		width: $container-width-md;
+	}
+
+	section{
+		margin-top: 10rem;
+	}
+
+
+}
+
+@media screen and (max-width: 600px) {
+	.container {
+		width: $container-width-sm;
+	}
+
+	section {
+		&__title {
+			margin-bottom: 2rem;
+		}
+	}
+
+}

@@ -1,0 +1,119 @@
+@import "../../assets/styles/colors.scss";
+
+/* Variables */
+$transition: all 400ms ease;
+
+.about__container {
+    display: grid;
+    grid-template-columns: 35% 50%;
+    gap: 15%;
+}
+
+/* Creating a square with a gradient background. */
+.about-me {
+    width: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 2rem;
+    background: linear-gradient(
+        45deg,
+        transparent,
+        $primary,
+        transparent
+    );
+    display: grid;
+    place-items: center;
+
+	&__image {
+		border-radius: 2rem;
+		overflow: hidden;
+		transform: rotate(10deg);
+		transition: $transition;
+		&:hover{
+			transform: rotate(0);
+		}
+	}
+}
+
+/* Styling the p tag inside the about__content class. */
+.about__content {
+	p {
+		margin: 2rem 0 2.6rem;
+		color: $light;
+	}
+}
+
+/* Creating a grid with three columns and a gap of 1.5rem between each column. */
+.about__cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+
+	&__item {
+		background: $bg-variant;
+		border: 1px solid transparent;
+		border-radius: 1rem;
+		padding: 2rem;
+		text-align: center;
+		transform: $transition;
+		&:hover {
+			background: transparent;
+			border-color: $primary-variant;
+			cursor: default;
+		}
+		h5 {
+			font-size: 0.95em;
+		}
+		small {
+			font-size: 0.7em;
+			color: $light;
+		}
+		&__icon {
+			color: $primary;
+			font-size: 1.4em;
+			margin-bottom: 1rem;
+		}
+	}
+}
+
+ /* ============ MEDIA QUERIES (MEDIUM DEVICES) ============ */
+ @media screen and (max-width: 1024px) {
+    .about__container {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .about-me {
+        width: 50%;
+        margin: 2rem auto 4rem;
+    }
+
+	.about__content {
+		p {
+			margin: 1rem 0 1.5rem;
+		}
+	}
+ }
+
+  /* ============ MEDIA QUERIES (SMALL DEVICES) ============ */
+  @media screen and (max-width: 600px) {
+    .about-me {
+        width: 65%;
+        margin: 0 auto 3rem;
+    }
+
+    .about__cards {
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+
+    .about__content {
+        text-align: center;
+    }
+
+	.about__content {
+		p {
+			margin: 1.5rem 0;
+		}
+	}
+    
+}

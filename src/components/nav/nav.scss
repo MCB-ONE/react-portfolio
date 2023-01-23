@@ -1,0 +1,35 @@
+@import '../../assets/styles/colors.scss';
+
+.nav {
+	background: rgba(0, 0, 0, .3);
+	width: -webkit-max-content;
+	width: max-content;
+	display: block;
+	padding: 0.7rem 1.7rem;
+	z-index: 2;
+	position: fixed;
+	left: 50%;
+	-webkit-transform: translate(-50%);
+	transform: translate(-50%);
+	bottom: 2rem;
+	display: flex;
+	grid-gap: 0.8rem;
+	gap: 0.8rem;
+	border-radius: 3rem;
+	-webkit-backdrop-filter: blur(15px);
+	backdrop-filter: blur(15px);
+
+	&__item {
+		background: transparent;
+		padding: 0.9rem;
+		border-radius: 50%;
+		display: flex;
+		color: $light;
+		font-size: 2rem;
+	}
+	
+	&__item--active{
+		color: $white;
+		background: $bg;
+	}
+}

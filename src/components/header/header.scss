@@ -1,0 +1,66 @@
+@import '../../assets/styles/colors.scss';
+
+.header{
+	height: 100vh;
+    padding-top: 1rem;
+    overflow: auto;
+	&__container {
+		text-align: center;
+		height: 100%;
+		position: relative;
+	}
+	&__cta{
+		margin-top: 2.5rem;
+		display: flex;
+		grid-gap: 1.2rem;
+		gap: 1.2rem;
+		justify-content: center;
+	}
+	&__socials{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		grid-gap: 0.8rem;
+		gap: 0.8rem;
+		position: absolute;
+		left: 0;
+		bottom: 3rem;
+		&::after{
+			content: "";
+			width: 1px;
+			height: 2rem;
+			background: $primary;
+		}
+	}
+	&__me{
+		background: linear-gradient(#4db5ff, transparent);
+		width: 22rem;
+		margin: 4rem auto 0;
+		height: auto;
+		border-radius: 12rem 12rem 0 0;
+	}
+}
+
+.scroll-down {
+    position: absolute;
+    right: -2.3rem;
+    bottom: 5rem;
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+    font-weight: 300;
+    font-size: .9rem;
+}
+
+/* =========== Header Media Queries =========== */
+
+@media screen and (max-width: 1024px) {
+	.header{
+		height: 68vh;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.header__socials, .scroll-down{
+		display: none;
+	}
+}

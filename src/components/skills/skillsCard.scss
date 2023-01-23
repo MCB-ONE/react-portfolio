@@ -1,0 +1,36 @@
+.skill {
+	background: var(--color-bg-variant);
+	padding: 2.4rem 5rem;
+	border-radius: 2rem;
+	border: 1px solid transparent;
+	transition: var(--transition);
+}
+
+
+
+
+/* ============ MEDIA QUERIES (SMALL DEVICES) ============ */
+@media screen and (max-width: 600px) {
+
+
+	.skill {
+		width: 95%;
+		padding: 2rem 1rem;
+
+		&__details-icons {
+			padding: 1.5px;
+		}
+	}
+}
+
+/* ============ MEDIA QUERIES (SMALL DEVICES) ============ */
+@media screen and (max-width: 600px) {
+	.skill {
+		width: 95%;
+		padding: 2rem 1rem;
+
+		&__details-icons {
+			padding: 1.5px;
+		}
+	}
+}
