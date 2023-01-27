@@ -26,6 +26,8 @@ section {
 }
 
 .button{
+	font-size: inherit;
+	line-height: inherit;
 	width: max-content;
 	display: inline-block;
 	color: $primary;

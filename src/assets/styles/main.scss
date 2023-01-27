@@ -38,13 +38,13 @@ body {
 
 @media (max-width: 684px) {
 	body {
-		font-size: 1.53rem;
+		font-size: 1.53em;
 	}
 }
 
 @media (max-width: 382px) {
 	body {
-		font-size: 1.35rem;
+		font-size: 1.35em;
 	}
 }
 
@@ -93,6 +93,11 @@ img {
 	display: block;
 	width: 100%;
 	object-fit: cover;
+}
+
+textarea, input{
+	font-family: inherit;
+	font-size: 1em;
 }
 
 /* Pre and Code */

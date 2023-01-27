@@ -1,17 +1,14 @@
 import "./about.scss";
 
 import React from "react";
-import { FaAward } from "react-icons/fa";
-import { FiUsers } from "react-icons/fi";
-import { VscFolderLibrary } from "react-icons/vsc";
 
 import ME from "../../assets/images/me-about2.jpg";
 
 export function About() {
 	return (
 		<section id="about">
-			<h5 className="subtitle">Get To Know</h5>
-			<h2 className="title">About Me</h2>
+			<h5 className="subtitle">Sobre mi</h5>
+			<h2 className="title">Presentación</h2>
 
 			<div className="container about__container">
 				<div className="about-me">
@@ -19,34 +16,15 @@ export function About() {
 						<img src={ME} alt="Imagen sobre mi" />
 					</div>
 				</div>
-
 				<div className="about__content">
-					<div className="about__cards">
-						<article className="about__cards__item">
-							<FaAward className="about__cards__item__icon" />
-							<h5>Experience</h5>
-							<small>3+ Years Working</small>
-						</article>
-						<article className="about__cards__item">
-							<FiUsers className="about__cards__item__icon" />
-							<h5>Clients</h5>
-							<small>200+ WorldWide</small>
-						</article>
-						<article className="about__cards__item">
-							<VscFolderLibrary className="about__cards__item__icon" />
-							<h5>Projects</h5>
-							<small>80+ Completed</small>
-						</article>
-					</div>
-
 					<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse accumsan maximus
-						justo, nec tincidunt nibh porttitor vel. Donec volutpat odio nibh, sed maximus mauris
-						porttitor quis. Aenean vehicula posuere enim vel rhoncus. Curabitur ac leo quam.
+						Desarrollador Web FullStack de Barcelona en contínua formación y en búsqueda de nuevos
+						retos. Mis ganas de conocimiento y crecimiento personal me hicieron entrar en el mundo
+						de la programación. Primero fue un hobby y con el tiempo se a convertido en mi passión.
 					</p>
 
 					<a href="#contact" className="button button--primary">
-						Let's Talk
+						Hablemos
 					</a>
 				</div>
 			</div>

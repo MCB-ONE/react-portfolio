@@ -1,0 +1,96 @@
+@import "../../assets/styles/colors.scss";
+
+/* Variables */
+$transition: all 400ms ease;
+
+.services__container {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 3rem;
+
+}
+
+.service {
+	font-size: 1em;
+	grid-column: 1fr;
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+	background: $bg-variant;
+	border-radius: 0 0 2rem 2rem;
+	border: 1px solid $primary;
+	height: fit-content;
+	transition: $transition;
+
+	>div {
+		padding: 2rem;
+	}
+
+	&:hover {
+		background: transparent;
+		border-color: $primary-variant;
+		cursor: default;
+	}
+
+	&__head {
+		text-align: center;
+		background: $primary;
+		border-radius: 0 0 2rem 2rem;
+		box-shadow: 0 2rem 1rem rgba(0, 0, 0, 0.1);
+
+		h3 {
+			color: $bg;
+			font-size: 1.5em;
+		}
+
+		h4 {
+			color: $bg;
+			font-size: 1.2em;
+		}
+	}
+
+	&__content {
+
+		h4 {
+			color: $primary;
+			font-size: 1.2em;
+			margin-bottom: 1rem;
+		}
+	}
+
+	&__list {
+		padding: 0;
+
+		svg {
+
+			margin-right: 0.9rem;
+			vertical-align: baseline;
+			margin-bottom: -2px;
+
+
+		}
+	}
+
+}
+
+
+/* ============ MEDIA QUERIES (MEDIUM DEVICES) ============ */
+@media screen and (max-width: 1024px) {
+    .services__container {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+
+    .service {
+        height: auto;
+    }
+}
+
+
+/* ============ MEDIA QUERIES (SMALL DEVICES) ============ */
+@media screen and (max-width: 600px) {
+    .services__container {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
