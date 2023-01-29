@@ -10,8 +10,8 @@ import { Rwd } from "./Icons/Rwd";
 export function Services() {
 	return (
 		<section id="services">
-			<h5 className="subtitle">Mis skills</h5>
-			<h2 className="title">Servicios y tecnologías</h2>
+			<h5 className="subtitle">Tecnologías y servicios</h5>
+			<h2 className="title">Habilidades</h2>
 
 			<div className="container services__container">
 				<article className="service">
@@ -21,8 +21,8 @@ export function Services() {
 					</div>
 					<div className="service__content">
 						<p>
-							Maquetación web responsive con sensibilidad estética e interacciones de usaurio bien
-							pensadas y fluidas. Proceso de desarrollo centrdo en la reutilización de componentes,
+							Maquetación web responsive con sensibilidad estética e interacciones de usuario bien
+							pensadas y fluidas. Proceso de desarrollo centrado en la reutilización de componentes,
 							la gestión de estados globales en aplicaciones complejas o la realización de testing
 							entre otras.
 						</p>
@@ -56,7 +56,7 @@ export function Services() {
 								</li>
 								<li>
 									<BsPatchCheck />
-									Metodólogia BEM
+									Metodología BEM
 								</li>
 								<li>
 									<BsPatchCheck />
@@ -74,9 +74,9 @@ export function Services() {
 					</div>
 					<div className="service__content">
 						<p>
-							Desarrolllo y mantenimiento de API RESTful con .Net Core 6 y gestión de la capa de
+							Desarrollo y mantenimiento de API RESTful con .Net Core 6 y gestión de la capa de
 							seguridad con JWT. Centro mis esfuerzos en realizar buenas prácticas de desarrollo
-							como el uso de patrones de diseño para una lograr una aqruitectura limpia o la
+							como el uso de patrones de diseño para una lograr una arquitectura limpia o la
 							realización de testing entre otras.
 						</p>
 						<div className="service__content__block">
@@ -128,7 +128,7 @@ export function Services() {
 					<div className="service__content">
 						<p>
 							Uso de software para la creación de interfaces gráficas y el desarrollo de experiencia
-							de usuario como Sketch o Adobe XD. Conociminetos de programas de diseño para la
+							de usuario como Sketch o Adobe XD. Conocimientos de programas de diseño para la
 							creación de contenidos digitales, retoque de imagen, creación de ilustraciones o
 							logotipos.
 						</p>

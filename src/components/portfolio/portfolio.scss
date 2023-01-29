@@ -17,14 +17,37 @@ $transition: all 400ms ease;
     transition: $transition;
 	&:hover {
 		border-color: $primary-variant;
-		background: transparent;
+		background: #2c2c6c4a;
 	}
 	&__image {
 		border-radius: 1.5rem;
 		overflow: hidden;
 	}
-	h3 {
-		margin: 1.2rem 0 2rem;
+	&__title {
+		font-size: 1.6em;
+		color: $primary;
+		margin-top: 1.2rem;
+	}
+	&__subtitle {
+		font-size: 1.2em;
+		color: $light;
+		margin-bottom:2rem;
+	}
+	&__description{
+		margin-bottom:2rem;
+	}
+	&__tags {
+		display: flex;
+		flex-wrap: wrap;
+		font-size: .9em;
+		gap: 1em;	
+		margin-bottom:2rem;
+		span{
+			background: $bg;
+			color: $primary;
+			padding: 0.5em;
+			border-radius: .4rem;
+		}
 	}
 	&__cta {
 		display: flex;

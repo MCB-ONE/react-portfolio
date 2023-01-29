@@ -1,0 +1,9 @@
+@import "../../../assets//styles/colors.scss";
+
+.read-more{
+	&__button{
+		margin-left: 1rem;
+		background: none;
+		color: $primary;
+	}
+}

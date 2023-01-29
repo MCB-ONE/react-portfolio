@@ -18,13 +18,13 @@ export function About() {
 				</div>
 				<div className="about__content">
 					<p>
-						Desarrollador Web FullStack de Barcelona en contínua formación y en búsqueda de nuevos
-						retos. Mis ganas de conocimiento y crecimiento personal me hicieron entrar en el mundo
-						de la programación. Primero fue un hobby y con el tiempo se a convertido en mi passión.
+						Desarrollador Web FullStack de Barcelona en continua formación y en búsqueda de nuevos
+						retos. Mis ganas de conocimiento y crecimiento personal hicieron que entrase en el mundo
+						de la programación. Primero como un hobby y con el tiempo se a convertido en mi passion.
 					</p>
 
 					<a href="#contact" className="button button--primary">
-						Hablemos
+						Contactar
 					</a>
 				</div>
 			</div>
