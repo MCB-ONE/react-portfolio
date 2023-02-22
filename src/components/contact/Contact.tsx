@@ -34,13 +34,11 @@ export function Contact() {
 					<article className="contact__option">
 						<MdOutlineMail className="contact__option__icon" />
 						<h4>Email</h4>
-						<h5>toni.salvado.rubio@gemail.com</h5>
-						<a href="mailto:toni.salvado.rubio@gemail.com">Mandame un mensaje</a>
+						<a href="mailto:toni.salvado.rubio@gemail.com">Mándame un mensaje</a>
 					</article>
 					<article className="contact__option">
 						<RiMessengerLine className="contact__option__icon" />
-						<h4>Linkedin</h4>
-						<h5>YourMessenger</h5>
+						<h4>LinkedIn</h4>
 						<a
 							href="https://www.linkedin.com/in/toni-salvad%C3%B3-rubio/"
 							target="_blank"
@@ -52,13 +50,12 @@ export function Contact() {
 					<article className="contact__option">
 						<BsWhatsapp className="contact__option__icon" />
 						<h4>WhatsApp</h4>
-						<h5>600031940</h5>
 						<a
 							href="https://api.whatsapp.com/send.phone=+34600031940"
 							target="_blank"
 							rel="noreferrer"
 						>
-							Mandame un mensaje
+							Mándame un mensaje
 						</a>
 					</article>
 				</div>

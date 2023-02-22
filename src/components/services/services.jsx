@@ -74,10 +74,9 @@ export function Services() {
 					</div>
 					<div className="service__content">
 						<p>
-							Desarrollo y mantenimiento de API RESTful con .Net Core 6 y gestión de la capa de
-							seguridad con JWT. Centro mis esfuerzos en realizar buenas prácticas de desarrollo
-							como el uso de patrones de diseño para una lograr una arquitectura limpia o la
-							realización de testing entre otras.
+							Desarrollo y mantenimiento de API REST seguras con .Net Core 6.Centro mis esfuerzos en
+							realizar buenas prácticas de desarrollo y una arquitectura limpia, por capas, modular
+							y escalable con la implementación de patrones de diseño.
 						</p>
 						<div className="service__content__block">
 							<h4>Lenguajes que utilizo</h4>

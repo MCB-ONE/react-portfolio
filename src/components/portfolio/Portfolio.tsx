@@ -11,7 +11,7 @@ export function Portfolio() {
 			<h5 className="subtitle">Trabajos destacados</h5>
 			<h2 className="title">Portfolio</h2>
 			<div className="container portfolio__container">
-				{data.map(({ id, image, title, subtitle, text, technologies, github }) => {
+				{data.map(({ id, image, title, subtitle, text, technologies, github, demo }) => {
 					return (
 						<article key={id} className="portfolio__item">
 							<div className="portfolio__item__image">
@@ -24,16 +24,24 @@ export function Portfolio() {
 							</div>
 							<div className="portfolio__item__tags">
 								{technologies.map((tech) => {
-									return <span>{tech}</span>;
+									return <span key={tech}>{tech}</span>;
 								})}
 							</div>
 							<div className="portfolio__item__cta">
-								<a href={github} className="button" target="_blank" rel="noreferrer">
-									Github
-								</a>
-								{/* <a href={demo} className="button button-primary" target="_blank" rel="noreferrer">
-									Live Demo
-								</a> */}
+								{github ? (
+									<a href={github} className="button" target="_blank" rel="noreferrer">
+										Github
+									</a>
+								) : (
+									""
+								)}
+								{demo ? (
+									<a href={demo} className="button button-primary" target="_blank" rel="noreferrer">
+										Live Demo
+									</a>
+								) : (
+									""
+								)}
 							</div>
 						</article>
 					);

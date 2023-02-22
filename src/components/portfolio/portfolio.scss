@@ -4,69 +4,82 @@
 $transition: all 400ms ease;
 
 .portfolio__container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2.5rem;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 2.5rem;
 }
 
 .portfolio__item {
-    background: $bg-variant;
-    padding: 1.2rem;
-    border-radius: 2rem;
-    border: 1px solid transparent;
-    transition: $transition;
+	display: flex;
+    flex-flow: column;
+	background: $bg-variant;
+	padding: 1.2rem;
+	border-radius: 2rem;
+	border: 1px solid transparent;
+	transition: $transition;
+
 	&:hover {
 		border-color: $primary-variant;
 		background: #2c2c6c4a;
 	}
+
 	&__image {
 		border-radius: 1.5rem;
 		overflow: hidden;
 	}
+
 	&__title {
 		font-size: 1.6em;
 		color: $primary;
 		margin-top: 1.2rem;
 	}
+
 	&__subtitle {
 		font-size: 1.2em;
 		color: $light;
-		margin-bottom:2rem;
+		margin-bottom: 2rem;
 	}
-	&__description{
-		margin-bottom:2rem;
+
+	&__description {
+		margin-bottom: 2rem;
 	}
+
 	&__tags {
 		display: flex;
 		flex-wrap: wrap;
 		font-size: .9em;
-		gap: 1em;	
-		margin-bottom:2rem;
-		span{
+		gap: 1em;
+		margin-bottom: 2rem;
+
+		span {
 			background: $bg;
 			color: $primary;
 			padding: 0.5em;
 			border-radius: .4rem;
 		}
 	}
+
 	&__cta {
+		align-self: flex-start;
+		margin-top: auto;
 		display: flex;
 		gap: 1rem;
 		margin-bottom: 1rem;
 	}
 }
- /* ============ MEDIA QUERIES (MEDIUM DEVICES) ============ */
- @media screen and (max-width: 1024px) {
-    .portfolio__container {
-        grid-template-columns: 1fr 1fr;
-        gap: 1.2rem;
-    }
+
+/* ============ MEDIA QUERIES (MEDIUM DEVICES) ============ */
+@media screen and (max-width: 1024px) {
+	.portfolio__container {
+		grid-template-columns: 1fr 1fr;
+		gap: 1.2rem;
+	}
 }
 
-  /* ============ MEDIA QUERIES (SMALL DEVICES) ============ */
-  @media screen and (max-width: 600px) {
-    .portfolio__container {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-    }
+/* ============ MEDIA QUERIES (SMALL DEVICES) ============ */
+@media screen and (max-width: 600px) {
+	.portfolio__container {
+		grid-template-columns: 1fr;
+		gap: 1rem;
+	}
 }
