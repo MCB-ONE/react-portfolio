@@ -1,7 +1,11 @@
+/* eslint-disable @typescript-eslint/no-unsafe-call */
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
+/* eslint-disable no-console */
 /* eslint-disable @typescript-eslint/no-misused-promises */
 import "./contact.scss";
 
-import React from "react";
+import emailjs from "@emailjs/browser";
+import React, { useState } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { BsWhatsapp } from "react-icons/bs";
 import { MdOutlineMail } from "react-icons/md";
@@ -19,9 +23,44 @@ export function Contact() {
 		formState: { errors },
 		handleSubmit,
 	} = useForm<FormValues>();
+
+	const [contactNumber, setContactNumber] = useState("000000");
+	const [statusMessage, setStatusMessage] = useState("Mensaje");
+
+	const generateContactNumber = () => {
+		const numStr = `000000${(Math.random() * 1000000) | 0}`;
+		setContactNumber(numStr.substring(numStr.length - 6));
+	};
+
 	const onSubmit: SubmitHandler<FormValues> = (data) => {
-		// eslint-disable-next-line no-console
-		console.log(data);
+		const form = document.querySelector("#contact-form") as HTMLFormElement;
+		const statusMessageElement = document.querySelector(".status-message") as HTMLFormElement;
+		generateContactNumber();
+
+		emailjs
+			.sendForm("service_vtobc0f", "template_pajavkb", "#contact-form", "Tn2K2FHB7ZTpMmJgd")
+			.then(
+				function (response) {
+					//TODO añadir pop up para el mensaje
+					setStatusMessage("Mensaje envíado!");
+					statusMessageElement.className = "status-message success";
+					setTimeout(() => {
+						statusMessageElement.className = "status-message";
+					}, 5000);
+					form.reset();
+				},
+				function (error) {
+					//TODO añadir pop up para el mensaje
+					setStatusMessage(
+						"¡Ha habido un fallo en el envío del mensaje! Por favor vuelva a probarlo más tarde."
+					);
+					statusMessageElement.className = "status-message failure";
+					form.reset();
+					setTimeout(() => {
+						statusMessageElement.className = "status-message";
+					}, 5000);
+				}
+			);
 	};
 
 	return (
@@ -62,7 +101,8 @@ export function Contact() {
 
 				{/* END OF CONTACT OPTION */}
 
-				<form onSubmit={handleSubmit(onSubmit)}>
+				<form id="contact-form" onSubmit={handleSubmit(onSubmit)}>
+					<input type="hidden" name="contact_number" value={contactNumber} />
 					<input
 						placeholder="Nombre Completo"
 						{...register("nombre", { required: true, minLength: 3, maxLength: 50 })}
@@ -86,6 +126,7 @@ export function Contact() {
 						<p className="error">*Ha de introducir un email válido </p>
 					)}
 					<textarea rows={7} placeholder="Escriba su mensaje..." {...register("mensaje")} />
+					<p className="status-message">{statusMessage}</p>
 					<button type="submit" className="button button--primary">
 						Enviar mensaje
 					</button>

@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@emailjs/browser": "^3.10.0",
     "@frank-mayer/react-tag-cloud": "^1.1.1",
     "i": "^0.3.7",
     "npm": "^9.4.0",

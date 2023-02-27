@@ -9,7 +9,7 @@ import { Rwd } from "./Icons/Rwd";
 
 export function Services() {
 	return (
-		<section id="services">
+		<section id="skills">
 			<h5 className="subtitle">Tecnologías y servicios</h5>
 			<h2 className="title">Habilidades</h2>
 

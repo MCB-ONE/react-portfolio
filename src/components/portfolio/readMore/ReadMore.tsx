@@ -22,6 +22,7 @@ export function ReadMore(props: Props) {
 	return (
 		<div className="read-more">
 			{readMoreShown ? props.children : props.children.substring(0, 100)}
+			{!readMoreShown ? " ..." : null}
 			<button onClick={toggleButton} className="read-more__button">
 				{readMoreShown ? "Leer menos" : "Leer más"}
 			</button>

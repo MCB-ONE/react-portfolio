@@ -71,6 +71,19 @@ input, textarea {
     margin-bottom: 1.2rem;
 }
 
+.status-message {
+  opacity: 0;
+}
+.success {
+  opacity: 1;
+  color: green;
+}
+.failure {
+  opacity: 1;
+  color: red;
+}
+
+
  /* ============ MEDIA QUERIES (MEDIUM DEVICES) ============ */
  @media screen and (max-width: 1024px) {
     .container.contact__container {
